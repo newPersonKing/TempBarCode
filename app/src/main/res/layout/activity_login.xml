@@ -1,0 +1,100 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--&lt;!&ndash; title &ndash;&gt;-->
+        <!--<include layout="@layout/include_title_layout" />-->
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 用户名 和密码 框 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+
+                <EditText
+                    android:id="@+id/et_login_main_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:background="@drawable/shape_corner_border_gray"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/dp_10"
+
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space">
+
+                    <EditText
+                        android:id="@+id/et_login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="@drawable/shape_corner_border_gray"
+                        android:gravity="center_vertical"
+                        android:hint="请输入6-16位密码"
+                        android:inputType="textPassword"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_login_password_tran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:padding="@dimen/dp_5"
+                        android:src="@mipmap/ic_password_hide"
+                        android:tag="false" />
+
+
+                </RelativeLayout>
+                <!-- 登陆按钮 -->
+                <Button
+                    android:id="@+id/btn_login_in"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:background="@drawable/shape_corner_back_blue"
+                    android:padding="0dp"
+                    android:text="登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <!-- 登陆按钮 -->
+                <Button
+                    android:id="@+id/btn_fast_login_in"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:background="@drawable/shape_corner_back_blue"
+                    android:padding="0dp"
+                    android:text="快速登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_17sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
