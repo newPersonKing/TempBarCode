@@ -1,6 +1,7 @@
 package com.emcc.barcode.activity;
 
 import android.text.method.KeyListener;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -36,8 +37,8 @@ public class ReceviceMessageActivity extends BaseActivity implements View.OnKeyL
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         if(keyCode == KeyEvent.KEYCODE_ENTER){
-            String text = et_recevice.getText().toString();
-            if(!text.isEmpty()){
+            String text = et_recevice.getText().toString().trim();
+            if(!text.isEmpty()&&text!=""){
                 tv_save.setText(text);
             }
             et_recevice.setText("");
