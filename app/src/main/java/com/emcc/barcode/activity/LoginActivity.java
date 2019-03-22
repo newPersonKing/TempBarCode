@@ -18,6 +18,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     EditText et_login_password;
     Button btn_login_in;
     Button btn_fast_login_in;
+    Button btn_smq;
+
 
     @Override
     protected int getLayoutID() {
@@ -35,8 +37,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         et_login_password = findViewById(R.id.et_login_password);
         btn_login_in = findViewById(R.id.btn_login_in);
         btn_fast_login_in = findViewById(R.id.btn_fast_login_in);
+        btn_smq = findViewById(R.id.btn_smq);
         btn_fast_login_in.setOnClickListener(this);
         btn_login_in.setOnClickListener(this);
+        btn_smq.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +52,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
             case R.id.btn_login_in:
                 readyGo(MainActivity.class);
+                break;
+            case R.id.btn_smq:
+                readyGo(ReceviceMessageActivity.class);
                 break;
         }
     }
